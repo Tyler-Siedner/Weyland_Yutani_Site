@@ -1,0 +1,131 @@
+.bio-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.bio-container h1 {
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.alien-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  justify-content: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.alien-card {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(4px);
+}
+
+.alien-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.alien-card h3 {
+  margin: 8px 0 4px;
+}
+
+.alien-card p {
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.alien-card button {
+  margin-top: auto;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.alien-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.alien-modal {
+  background: #111;
+  color: white;
+  max-width: 600px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.alien-modal-image {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.alien-modal-title {
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.alien-details {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.alien-details p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .bio-container {
+    padding: 24px;
+    background-attachment: scroll;
+  }
+
+  .alien-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+  }
+}

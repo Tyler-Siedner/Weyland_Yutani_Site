@@ -1,0 +1,135 @@
+.heros-container {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.header3 {
+  display: inline-block;
+  padding: 10px 16px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  margin-bottom: 30px;
+  font-weight: bold;
+  
+  
+}
+
+.heros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  justify-content: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.hero-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.hero-card h3 {
+  margin: 8px 0 4px;
+}
+
+.hero-card p {
+  margin: 0 0 12px;
+}
+
+.hero-card button {
+  margin-top: auto;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.hero-modal {
+  background: #111;
+  color: white;
+  max-width: 600px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.hero-modal-image {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.hero-modal-title {
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.hero-details {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.hero-details p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .heros-container {
+    padding: 24px;
+  }
+
+  .heros-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+  }
+}
